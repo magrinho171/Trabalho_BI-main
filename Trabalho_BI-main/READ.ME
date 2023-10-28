@@ -1,0 +1,44 @@
+PARA REALIZAR A EXECUÇÃO DO DOCKER E DO ETL, TERÁ QUE REALIZAR OS SEGUINTES PASSOS:
+1 - Abrir e extrair a pasta que foi baixada do GitHub (TRABALHO_BI) no VSCode;
+
+2 - Abrir o VSCode, abrir o terminal e verificar via terminal se está na pasta "Trabalho";
+
+3 - No terminal, deverá ser executado os seguintes comandos:
+    - cd VENDAS
+    - cd FERIADO
+    - docker build -t feriado .
+
+4 - Após isso deverá voltar a pasta "Trabalho": 
+    - cd ..
+    - cd ..
+
+5 - Acessar a pasta do DW_VENDAS e inicializar o Docker, com os seguintes comandos no terminal:
+    - cd DW
+    - cd DW_VENDAS
+    - docker build -t db-vendas .  
+
+6 - No Docker, verificar se foram criadas as imagens e deverá realizar os seguintes passos:
+    Feriado
+        - Executar a image "feriado";
+        - Inserir o nome como "feriado";
+        - Colocar o número 3399 na PORT;
+    Feriado
+        - Executar a image "dw-vendas";
+        - Inserir o nome como "feriado";
+        - Colocar o número 3398 na PORT;
+
+
+
+7 - Após isso deverá abrir o SPOON e abrir os seguintes arquivos (Trabalho_BI\Trabalho_BI-main\VENDAS)
+    - ETL_Vendas
+    - ETL_FATO-Vendas
+
+8 - Com os arquivos já aberta, deverão ser executados na seguinte ordem:
+    - ETL_Vendas
+    - ETL_FATO-Vendas
+
+* Caso não der certo as execuções do passo 8, abrir o arquivo "SPOON_VENDAS" (pasta -> Trabalho_BI-main) e seguir os passos.
+
+9 - Com os dados carregados, deverá ser aberto o arquivo "VENDAS_BI", encontra-se na pasta "Trabalho_BI\Trabalho_BI-main\VENDAS";
+10 - Deverá ir no menu "Página Inicial" e clicar para atualizar os dados;
+11 - Com isso já terá o dashboard para poder fazer a análise dos dados.
